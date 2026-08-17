@@ -40,7 +40,8 @@ This project covers the complete machine learning workflow:
 ---
 
 ## 📁 Folder Structure
-Loan_Approval_Prediction/
+```
+Loan Approval Prediction/
 │
 │── app.py # Flask web application
 │── train.py # Main training script
@@ -78,10 +79,7 @@ Loan_Approval_Prediction/
 css/
 style.css # Custom CSS styles
 images/ # Static images folder
-
-text
-
-
+```
 ---
 
 ## 🛠️ Technologies Used
