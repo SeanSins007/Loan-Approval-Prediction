@@ -1,0 +1,391 @@
+/* ==================================================
+   Loan Approval Prediction — Custom Styles
+   Built on top of Bootstrap 5
+   ================================================== */
+
+
+/* ==================================================
+   Global & Body
+   ================================================== */
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* ==================================================
+   Navbar
+   ================================================== */
+
+.navbar {
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+
+.navbar-brand {
+  letter-spacing: 0.3px;
+}
+
+
+/* ==================================================
+   Hero Section
+   ================================================== */
+
+.hero-section {
+  background: linear-gradient(135deg, #e8f0fe 0%, #f0f4ff 50%, #fafafa 100%);
+  border-bottom: 1px solid #dee2e6;
+}
+
+.hero-title {
+  font-size: 2rem;
+  color: #1a1a2e;
+  letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* ==================================================
+   Metrics Strip
+   ================================================== */
+
+.metrics-strip {
+  background-color: #f8f9fa;
+}
+
+.metric-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 0.5rem;
+}
+
+.metric-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.metric-value {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+
+/* ==================================================
+   Cards — General
+   ================================================== */
+
+.card {
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.card-header {
+  background-color: #ffffff;
+}
+
+.rounded-top-4 {
+  border-top-left-radius: 0.75rem !important;
+  border-top-right-radius: 0.75rem !important;
+}
+
+
+/* ==================================================
+   Form Elements
+   ================================================== */
+
+.form-label {
+  font-size: 0.875rem;
+  color: #343a40;
+  margin-bottom: 0.35rem;
+}
+
+.form-control,
+.form-select {
+  border-radius: 0.5rem;
+  border: 1px solid #ced4da;
+  font-size: 0.9rem;
+  padding: 0.55rem 0.85rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.form-text {
+  font-size: 0.76rem;
+  margin-top: 0.25rem;
+}
+
+/* Bootstrap Validation Styles */
+.was-validated .form-control:invalid,
+.was-validated .form-select:invalid {
+  border-color: #dc3545;
+  background-image: none;
+}
+
+.was-validated .form-control:valid,
+.was-validated .form-select:valid {
+  border-color: #198754;
+  background-image: none;
+}
+
+
+/* ==================================================
+   Submit & Reset Buttons
+   ================================================== */
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0px);
+}
+
+.btn-outline-secondary {
+  font-size: 0.875rem;
+  padding: 0.55rem 1.2rem;
+  color: #6c757d;
+  border-color: #dee2e6;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #f1f3f5;
+  border-color: #ced4da;
+  color: #495057;
+}
+
+
+/* ==================================================
+   Result Card
+   ================================================== */
+
+.result-card {
+  border-top: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.result-success {
+  border-top-color: #198754;
+  background: linear-gradient(160deg, #f0fff4 0%, #ffffff 100%);
+}
+
+.result-danger {
+  border-top-color: #dc3545;
+  background: linear-gradient(160deg, #fff5f5 0%, #ffffff 100%);
+}
+
+.result-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-icon {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.result-heading {
+  font-size: 1.6rem;
+  color: #1a1a2e;
+}
+
+/* Confidence Progress Bar */
+.progress {
+  background-color: #e9ecef;
+  border-radius: 50px;
+}
+
+.confidence-wrapper {
+  margin-top: 0.5rem;
+}
+
+
+/* ==================================================
+   Step List (How It Works)
+   ================================================== */
+
+.step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  height: 26px;
+  background-color: #0d6efd;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+
+/* ==================================================
+   Alert
+   ================================================== */
+
+.alert {
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+}
+
+.alert ul {
+  padding-left: 1.2rem;
+}
+
+.alert li {
+  margin-top: 0.25rem;
+}
+
+
+/* ==================================================
+   Footer
+   ================================================== */
+
+.footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+.footer p {
+  font-size: 0.82rem;
+  color: #6c757d;
+}
+
+/* ==================================================
+   Confidence Progress Bar
+   ================================================== */
+
+.confidence-progress {
+  height: 10px;
+}
+
+.progress-bar {
+  transition: width 0.6s ease;
+}
+
+
+
+/* ==================================================
+   Responsive Tweaks
+   ================================================== */
+
+@media (max-width: 768px) {
+  .result-icon {
+    font-size: 2.8rem;
+  }
+
+  .result-heading {
+    font-size: 1.35rem;
+  }
+
+  .card-body {
+    padding: 1.25rem !important;
+  }
+
+  .metric-value {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-primary,
+  .btn-outline-secondary {
+    font-size: 0.875rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .step-number {
+    min-width: 22px;
+    height: 22px;
+    font-size: 0.72rem;
+  }
+}
+
+
+/* ==================================================
+   Utility Animations
+   ================================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-card {
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.card {
+  animation: fadeInUp 0.3s ease forwards;
+}
